@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destrave o Corpo — O Método da Presença Masculina</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0A0A0A;
+    --red: #E30613;
+    --red-dark: #A00010;
+    --white: #FFFFFF;
+    --gray: #888888;
+    --gray-light: #CCCCCC;
+    --gray-mid: #333333;
+    --gold: #C9A84C;
+    --dark: #111111;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--red);
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: pulse-bar 2s ease-in-out infinite;
+  }
+  @keyframes pulse-bar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 80px 40px 80px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(227,6,19,0.25) 0%, transparent 65%),
+                linear-gradient(135deg, #0A0A0A 50%, #1a0305 100%);
+    z-index: 0;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: -60px;
+    top: 0;
+    bottom: 0;
+    width: 55%;
+    background: linear-gradient(to left, rgba(227,6,19,0.08), transparent);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+
+  /* Diagonal accent */
+  .hero-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--red);
+    z-index: 2;
+  }
+  .hero-accent-gold {
+    position: absolute;
+    top: 0;
+    right: 6px;
+    width: 2px;
+    height: 40%;
+    background: var(--gold);
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 6px 14px;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+
+  .hero-pre {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(14px, 2vw, 17px);
+    font-weight: 400;
+    color: var(--gray-light);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .hero-pre span {
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  .hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(60px, 10vw, 110px);
+    font-weight: 700;
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: var(--white);
+  }
+
+  .hero h1 .red { color: var(--red); }
+
+  .hero-rule {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 24px 0;
+  }
+
+  .hero-sub {
+    font-size: clamp(14px, 1.8vw, 17px);
+    font-weight: 400;
+    color: var(--gray-light);
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 40px;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 20px 48px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .hero-cta:hover::after { transform: translateX(0); }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(227,6,19,0.4); }
+
+  .hero-price-note {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--gray);
+  }
+  .hero-price-note del { color: var(--gray); }
+  .hero-price-note strong { color: var(--white); font-size: 16px; }
+
+  /* ── SECTION BASE ── */
+  section { padding: 80px 40px; }
+
+  .container { max-width: 820px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 5px 12px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(36px, 6vw, 58px);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .rule {
+    width: 80px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  p { font-size: 15px; color: var(--gray-light); line-height: 1.8; margin-bottom: 20px; }
+
+  /* ── IDENTIFICATION ── */
+  .identification { background: var(--dark); }
+
+  .id-list { list-style: none; margin: 32px 0; }
+  .id-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-mid);
+    font-size: 15px;
+    color: var(--gray-light);
+  }
+  .id-list li:last-child { border-bottom: none; }
+  .id-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--red);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+
+  .id-conclusion {
+    background: var(--gray-mid);
+    border-left: 4px solid var(--red);
+    padding: 20px 24px;
+    margin-top: 24px;
+  }
+  .id-conclusion p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--white);
+    font-size: 15px;
+  }
+  .id-conclusion p span { color: var(--red); }
+
+  /* ── PROBLEM ── */
+  .problem { background: var(--black); }
+
+  .problem-statement {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 32px 0;
+  }
+  .problem-statement .highlight { color: var(--red); }
+  .problem-statement .small { font-size: 0.65em; color: var(--gray); display: block; }
+
+  /* ── SOLUTION ── */
+  .solution {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a0305 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .solution::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: var(--red);
+  }
+  .solution::after {
+    content: 'DC';
+    position: absolute;
+    right: -20px;
+    bottom: -40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 260px;
+    font-weight: 700;
+    color: rgba(227,6,19,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  /* ── WHAT YOU GET ── */
+  .benefits { background: var(--dark); }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 40px;
+  }
+  @media(max-width: 600px) { .benefit-grid { grid-template-columns: 1fr; } }
+
+  .benefit-item {
+    background: var(--gray-mid);
+    padding: 24px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .benefit-item:hover { border-left-color: var(--red); }
+  .benefit-item:nth-child(odd):hover { border-left-color: var(--gold); }
+
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .benefit-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .benefit-desc {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ── METHOD ── */
+  .method { background: var(--black); }
+
+  .pillars {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .pillar {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: var(--gray-mid);
+    overflow: hidden;
+    transition: background 0.2s;
+  }
+  .pillar:hover { background: #3a3a3a; }
+
+  .pillar-num {
+    background: var(--red);
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--white);
+    width: 70px;
+    min-width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pillar-content { padding: 16px 24px; }
+
+  .pillar-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .pillar-desc { font-size: 13px; color: var(--gray); margin: 0; }
+
+  /* ── TRANSFORMATION ── */
+  .transformation { background: var(--dark); }
+
+  .before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 40px;
+  }
+  @media(max-width: 600px) { .before-after { grid-template-columns: 1fr; } }
+
+  .before, .after { padding: 36px; }
+
+  .before { background: #1a1a1a; border-top: 4px solid #444; }
+  .after { background: #1a0305; border-top: 4px solid var(--red); }
+
+  .ba-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 20px;
+  }
+  .after .ba-label { color: var(--red); }
+
+  .ba-list { list-style: none; }
+  .ba-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .ba-list li:last-child { border-bottom: none; }
+  .ba-marker { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .before .ba-marker { color: #555; }
+  .after .ba-marker { color: var(--red); }
+  .ba-text strong { display: block; font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  .before .ba-text strong { color: #666; }
+  .after .ba-text strong { color: var(--white); }
+  .ba-text span { font-size: 12px; color: var(--gray); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--black); }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  @media(max-width: 600px) { .testi-grid { grid-template-columns: 1fr; } }
+
+  .testi-item {
+    background: var(--gray-mid);
+    padding: 28px;
+    border-left: 3px solid var(--red);
+    position: relative;
+  }
+
+  .testi-quote {
+    font-size: 40px;
+    color: rgba(227,6,19,0.3);
+    font-family: Georgia, serif;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .testi-text {
+    font-size: 14px;
+    color: var(--gray-light);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  .testi-author {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .testi-role { font-size: 11px; color: var(--gray); margin-top: 3px; }
+
+  /* ── PRICE ── */
+  .price-section {
+    background: linear-gradient(135deg, #0f0505 0%, #1a0305 100%);
+    text-align: center;
+    border-top: 4px solid var(--red);
+    position: relative;
+  }
+
+  .price-box {
+    max-width: 520px;
+    margin: 0 auto;
+    background: var(--gray-mid);
+    padding: 48px;
+    position: relative;
+  }
+  .price-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(227,6,19,0.3);
+    pointer-events: none;
+  }
+
+  .price-original {
+    font-size: 18px;
+    color: var(--gray);
+    text-decoration: line-through;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .price-main {
+    font-family: 'Oswald', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .price-main sup { font-size: 32px; vertical-align: top; margin-top: 10px; display: inline-block; }
+
+  .price-note {
+    font-size: 13px;
+    color: var(--gray);
+    margin-bottom: 36px;
+  }
+
+  .price-cta {
+    display: block;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 22px 48px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
+  }
+  .price-cta:hover { background: #c0000f; transform: translateY(-2px); box-shadow: 0 10px 40px rgba(227,6,19,0.4); }
+
+  .price-guarantee {
+    font-size: 12px;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .guarantee-icon {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  /* ── GUARANTEE ── */
+  .guarantee-section {
+    background: var(--dark);
+    border-top: 1px solid var(--gray-mid);
+  }
+
+  .guarantee-box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  @media(max-width: 600px) { .guarantee-box { flex-direction: column; text-align: center; } }
+
+  .guarantee-badge {
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
+  .guarantee-badge .days { font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .guarantee-badge .dias { font-size: 11px; color: var(--gray); letter-spacing: 2px; }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: var(--black);
+    text-align: center;
+    border-top: 4px solid var(--red);
+    padding: 80px 40px 100px;
+  }
+
+  .final-cta h2 { margin-bottom: 8px; }
+  .final-cta p { max-width: 500px; margin: 0 auto 40px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #050505;
+    border-top: 1px solid var(--gray-mid);
+    padding: 32px 40px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .footer-logo span { color: var(--red); }
+  .footer-tagline { font-size: 11px; color: var(--gray); letter-spacing: 3px; margin-bottom: 16px; }
+  .footer-copy { font-size: 11px; color: #444; }
+
+  /* ── STICKY CTA BAR ── */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--red);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 14px 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-price { font-size: 13px; color: rgba(255,255,255,0.8); }
+  .sticky-price del { color: rgba(255,255,255,0.5); }
+  .sticky-price strong { color: white; font-size: 18px; }
+  .sticky-btn {
+    background: var(--white);
+    color: var(--red);
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 28px;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+  }
+  .sticky-btn:hover { opacity: 0.9; }
+  @media(max-width: 480px) { .sticky-cta { flex-direction: column; gap: 10px; padding: 12px; } }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* Decorative number background */
+  .bg-num {
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: rgba(255,255,255,0.02);
+    pointer-events: none;
+    line-height: 1;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  🔴 LANÇAMENTO — Oferta por tempo limitado: De R$97 por apenas R$47
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-accent"></div>
+  <div class="hero-accent-gold"></div>
+  <div class="hero-content fade-up visible">
+    <div class="hero-tag">O Método da Presença Masculina</div>
+    <p class="hero-pre">Você não está quebrado. <span>Você está travado.</span></p>
+    <h1>DESTRAVE<br><span class="red">O CORPO</span></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">Descubra por que homens de 40+ travam — e o método prático para destravar o corpo, recuperar a presença e voltar a ser percebido como você realmente é.</p>
+    <a href="https://pay.kiwify.com.br/hu5F7jq" class="hero-cta">Quero Destravar Agora →</a>
+    <p class="hero-price-note"><del>De R$ 97,00</del> — por apenas <strong>R$ 47,00</strong> &nbsp;|&nbsp; Acesso imediato</p>
+  </div>
+</section>
+
+<!-- IDENTIFICATION -->
+<section class="identification">
+  <div class="container">
+    <span class="section-tag">Você se identifica?</span>
+    <h2>Esses sinais<br><span style="color:var(--red)">te descrevem?</span></h2>
+    <div class="rule"></div>
+
+    <ul class="id-list">
+      <li><span class="id-dot"></span>Evita se expor ou ser o centro das atenções.</li>
+      <li><span class="id-dot"></span>Sente tensão constante no corpo e na mandíbula.</li>
+      <li><span class="id-dot"></span>Tem dificuldade de iniciar conversas ou se aproximar.</li>
+      <li><span class="id-dot"></span>Se sente inseguro mesmo sabendo do que é capaz.</li>
+      <li><span class="id-dot"></span>Cansa fácil, tem pouca disposição e motivação.</li>
+      <li><span class="id-dot"></span>Vive no automático, sem presença e sem prazer.</li>
+    </ul>
+
+    <div class="id-conclusion">
+      <p>Isso não é falta de confiança. <span>É bloqueio corporal.</span> E ele tem solução.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container fade-up">
+    <span class="section-tag">O problema real</span>
+    <h2>A maioria busca<br>a solução <span style="color:var(--red)">errada</span></h2>
+    <div class="rule"></div>
+
+    <p>A maioria dos homens busca a solução na cabeça — lê mais, assiste mais, aprende mais. Mas o bloqueio continua.</p>
+
+    <div class="problem-statement">
+      O problema<br>
+      <span class="highlight">não está na mente.</span><br>
+      <span class="small">Começou no corpo.</span>
+    </div>
+
+    <p>Tensão acumulada. Emoções represadas. Padrões invisíveis gravados no tecido muscular ao longo de anos. O corpo trava. A presença enfraquece. A vida passa.</p>
+    <p style="color:var(--white); font-weight:600;">A mente segue o corpo — não o contrário.</p>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution">
+  <div class="container fade-up">
+    <span class="section-tag">A solução</span>
+    <h2>DESTRAVE<br><span style="color:var(--red)">O CORPO</span></h2>
+    <div class="rule"></div>
+    <p style="font-size:16px; color:var(--gray-light);">Um eBook de <strong style="color:var(--white)">50 páginas</strong> desenvolvido para homens que já têm conhecimento, experiência e capacidade — mas ainda sentem que algo trava.</p>
+    <p>Não é teoria. É um sistema prático de desbloqueio com exercícios aplicáveis, insights diretos e um método completo de transformação masculina.</p>
+    <p style="color:var(--gold); font-weight:600; font-size:15px;">Corpo desbloqueado. Mente livre. Presença real.</p>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="container fade-up">
+    <span class="section-tag">O que você recebe</span>
+    <h2>Tudo que está<br><span style="color:var(--red)">dentro do eBook</span></h2>
+    <div class="rule"></div>
+
+    <div class="benefit-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">01</div>
+        <div class="benefit-title">O Método Destrave</div>
+        <p class="benefit-desc">6 pilares para liberar sua presença e transformar sua vida de forma permanente.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">02</div>
+        <div class="benefit-title">5 Exercícios Práticos</div>
+        <p class="benefit-desc">Aplicáveis hoje mesmo. Postura, respiração, olhar, movimento e presença.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">03</div>
+        <div class="benefit-title">A Mecânica do Bloqueio</div>
+        <p class="benefit-desc">Entenda exatamente por que você trava e como isso afeta cada área da sua vida.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">04</div>
+        <div class="benefit-title">Programa de 3 Semanas</div>
+        <p class="benefit-desc">Um plano diário progressivo para incorporar o desbloqueio como identidade.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">05</div>
+        <div class="benefit-title">Liderança e Legado</div>
+        <p class="benefit-desc">Como a presença corporal impacta sua liderança, relacionamentos e legado.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">06</div>
+        <div class="benefit-title">Design Premium</div>
+        <p class="benefit-desc">50 páginas com layout editorial. Leitura dinâmica, escaneável e envolvente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method">
+  <div class="container fade-up">
+    <span class="section-tag">Os 6 pilares</span>
+    <h2>O Método<br><span style="color:var(--red)">em 6 etapas</span></h2>
+    <div class="rule"></div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-content">
+          <div class="pillar-title">Consciência</div>
+          <p class="pillar-desc">Observe seu corpo sem corrigir. O primeiro passo é perceber.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-content">
+          <div class="pillar-title">Respiração</div>
+          <p class="pillar-desc">Respiração profunda = controle emocional. O regulador mais poderoso que você tem.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-content">
+          <div class="pillar-title">Movimento</div>
+          <p class="pillar-desc">Movimento livre = liberação. O corpo guarda memórias que só o movimento liberta.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div class="pillar-content">
+          <div class="pillar-title">Expressão</div>
+          <p class="pillar-desc">Se expressar = sair da trava. A voz, o gesto e o olhar são extensões do seu desbloqueio.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">05</div>
+        <div class="pillar-content">
+          <div class="pillar-title">Exposição</div>
+          <p class="pillar-desc">Pequenos riscos = grande crescimento. Cada avanço enfraquece o bloqueio.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">06</div>
+        <div class="pillar-content">
+          <div class="pillar-title">Integração</div>
+          <p class="pillar-desc">Você não muda — você desbloqueia. Incorpore como identidade, não como técnica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATION -->
+<section class="transformation">
+  <div class="container fade-up">
+    <span class="section-tag">A transformação</span>
+    <h2>Antes e<br><span style="color:var(--red)">depois</span></h2>
+    <div class="rule"></div>
+
+    <div class="before-after">
+      <div class="before">
+        <div class="ba-label">Antes — Travado</div>
+        <ul class="ba-list">
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Travado</strong><span>Corpo fechado, energia bloqueada</span></span></li>
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Invisível</strong><span>Passa despercebido em qualquer lugar</span></span></li>
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Contido</strong><span>Guarda mais do que expressa</span></span></li>
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Reativo</strong><span>Age por impulso ou se paralisa</span></span></li>
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Vazio</strong><span>Faz mas não sente. Vive mas não está.</span></span></li>
+        </ul>
+      </div>
+      <div class="after">
+        <div class="ba-label">Depois — Desbloqueado</div>
+        <ul class="ba-list">
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Presente</strong><span>Ocupa o espaço com intenção e força</span></span></li>
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Confiante</strong><span>Segurança que vem de dentro</span></span></li>
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Percebido</strong><span>Sua energia fala antes de você</span></span></li>
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Intencional</strong><span>Age com propósito e clareza</span></span></li>
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Vivo</strong><span>Sente. Expressa. Conecta. Impacta.</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container fade-up">
+    <span class="section-tag">Quem já desbloqueou</span>
+    <h2>Resultados<br><span style="color:var(--red)">reais</span></h2>
+    <div class="rule"></div>
+
+    <div class="testi-grid">
+      <div class="testi-item">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Entrei diferente. Saí transformado. Não consigo explicar — só sentir. Minha voz ganhou uma autoridade que nunca tive.</p>
+        <div class="testi-author">Marco A.</div>
+        <div class="testi-role">Empresário, 47 anos</div>
+      </div>
+      <div class="testi-item">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Meu filho de 15 anos me disse: pai, você mudou. Isso me quebrou de um jeito bom. Valeu cada centavo.</p>
+        <div class="testi-author">Ricardo M.</div>
+        <div class="testi-role">Executivo, 49 anos</div>
+      </div>
+      <div class="testi-item">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Fechei o maior contrato da minha vida depois de aplicar o método. Presença real vende. Isso é real.</p>
+        <div class="testi-author">Felipe R.</div>
+        <div class="testi-role">Executivo, 52 anos</div>
+      </div>
+      <div class="testi-item">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Semanas de bloqueio foram liberadas em poucos dias de prática consistente. Me sinto de volta a mim mesmo.</p>
+        <div class="testi-author">André L.</div>
+        <div class="testi-role">Médico, 44 anos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price-section">
+  <div class="container fade-up" style="text-align:center;">
+    <span class="section-tag">Investimento</span>
+    <h2 style="margin-bottom:40px;">Seu acesso<br><span style="color:var(--red)">imediato</span></h2>
+
+    <div class="price-box">
+      <span class="price-original">De R$ 97,00</span>
+      <div class="price-main"><sup>R$</sup>47</div>
+      <p class="price-note">Pagamento único • Acesso imediato • Download em PDF</p>
+      <a href="https://pay.kiwify.com.br/hu5F7jq" class="price-cta">Quero Destravar Agora →</a>
+      <div class="price-guarantee">
+        <div class="guarantee-icon">🔒</div>
+        <span>Pagamento 100% seguro • Garantia de 7 dias • Sem perguntas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee-section">
+  <div class="container">
+    <div class="guarantee-box">
+      <div class="guarantee-badge">
+        <span class="days">7</span>
+        <span class="dias">DIAS</span>
+      </div>
+      <div>
+        <h3 style="font-family:'Oswald',sans-serif; font-size:22px; text-transform:uppercase; margin-bottom:10px;">Garantia incondicional de 7 dias</h3>
+        <p style="margin:0; font-size:14px; color:var(--gray);">Se por qualquer motivo você não gostar do eBook, devolvemos 100% do seu investimento. Sem burocracia. Sem perguntas. Risco zero para você.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="fade-up">
+    <h2>A decisão<br><span style="color:var(--red)">é sua.</span></h2>
+    <div class="rule" style="margin: 20px auto;"></div>
+    <p>Você pode continuar travado. Ou pode investir R$47 e começar hoje.</p>
+    <p style="color:var(--gold); font-weight:600;">O corpo já sabe o que você precisa.</p>
+    <a href="https://pay.kiwify.com.br/hu5F7jq" class="hero-cta">Acessar o eBook Agora →</a>
+    <p style="margin-top:16px; font-size:12px; color:var(--gray);">De <del>R$97</del> por R$47 • Acesso imediato • Garantia de 7 dias</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><span>DC</span> DESTRAVE O CORPO</div>
+  <div class="footer-tagline">CORPO • CONFIANÇA • PRESENÇA</div>
+  <div class="footer-copy">© 2026 Destrave o Corpo. Todos os direitos reservados.</div>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-price"><del>R$97</del> → <strong>R$ 47</strong></div>
+  <a href="https://pay.kiwify.com.br/hu5F7jq" class="sticky-btn">Quero Destravar →</a>
+</div>
+
+<script>
+  // Fade up on scroll
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  // Sticky CTA
+  const sticky = document.getElementById('stickyCta');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) sticky.classList.add('visible');
+    else sticky.classList.remove('visible');
+  });
+</script>
+</body>
+</html>
