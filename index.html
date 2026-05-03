@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Destrave o Corpo — O Método da Presença Masculina</title>
+<title>Destrave o Corpo — O Método da Presença Masculina | Michael Soares</title>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -19,7 +19,6 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -34,15 +33,9 @@
     background: var(--red);
     text-align: center;
     padding: 10px 20px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
-    animation: pulse-bar 2s ease-in-out infinite;
-  }
-  @keyframes pulse-bar {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.85; }
   }
 
   /* ── HERO ── */
@@ -52,7 +45,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: 80px 40px 80px;
+    padding: 80px 40px;
   }
 
   .hero::before {
@@ -64,34 +57,17 @@
     z-index: 0;
   }
 
-  .hero::after {
-    content: '';
-    position: absolute;
-    right: -60px;
-    top: 0;
-    bottom: 0;
-    width: 55%;
-    background: linear-gradient(to left, rgba(227,6,19,0.08), transparent);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-    z-index: 0;
-  }
-
-  /* Diagonal accent */
   .hero-accent {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 6px;
-    height: 100%;
+    top: 0; right: 0;
+    width: 6px; height: 100%;
     background: var(--red);
     z-index: 2;
   }
   .hero-accent-gold {
     position: absolute;
-    top: 0;
-    right: 6px;
-    width: 2px;
-    height: 40%;
+    top: 0; right: 6px;
+    width: 2px; height: 40%;
     background: var(--gold);
     z-index: 2;
   }
@@ -115,18 +91,13 @@
   }
 
   .hero-pre {
-    font-family: 'Montserrat', sans-serif;
     font-size: clamp(14px, 2vw, 17px);
     font-weight: 400;
     color: var(--gray-light);
     margin-bottom: 8px;
     letter-spacing: 1px;
   }
-
-  .hero-pre span {
-    color: var(--red);
-    font-weight: 700;
-  }
+  .hero-pre span { color: var(--red); font-weight: 700; }
 
   .hero h1 {
     font-family: 'Oswald', sans-serif;
@@ -134,10 +105,8 @@
     font-weight: 700;
     line-height: 0.9;
     text-transform: uppercase;
-    margin-bottom: 0;
     color: var(--white);
   }
-
   .hero h1 .red { color: var(--red); }
 
   .hero-rule {
@@ -168,19 +137,8 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.2s ease;
-    position: relative;
-    overflow: hidden;
   }
-  .hero-cta::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.1);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
-  .hero-cta:hover::after { transform: translateX(0); }
-  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(227,6,19,0.4); }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(227,6,19,0.4); background: #c0000f; }
 
   .hero-price-note {
     margin-top: 16px;
@@ -192,7 +150,6 @@
 
   /* ── SECTION BASE ── */
   section { padding: 80px 40px; }
-
   .container { max-width: 820px; margin: 0 auto; }
 
   .section-tag {
@@ -240,8 +197,7 @@
   }
   .id-list li:last-child { border-bottom: none; }
   .id-dot {
-    width: 10px;
-    height: 10px;
+    width: 10px; height: 10px;
     background: var(--red);
     border-radius: 50%;
     flex-shrink: 0;
@@ -254,12 +210,7 @@
     padding: 20px 24px;
     margin-top: 24px;
   }
-  .id-conclusion p {
-    margin: 0;
-    font-weight: 600;
-    color: var(--white);
-    font-size: 15px;
-  }
+  .id-conclusion p { margin: 0; font-weight: 600; color: var(--white); font-size: 15px; }
   .id-conclusion p span { color: var(--red); }
 
   /* ── PROBLEM ── */
@@ -289,21 +240,91 @@
     width: 100%; height: 4px;
     background: var(--red);
   }
-  .solution::after {
-    content: 'DC';
-    position: absolute;
-    right: -20px;
-    bottom: -40px;
+
+  /* ── AUTHORITY ── */
+  .authority { background: var(--dark); border-top: 1px solid var(--gray-mid); }
+
+  .authority-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 40px;
+  }
+  @media(max-width: 700px) { .authority-inner { grid-template-columns: 1fr; gap: 32px; } }
+
+  .authority-avatar {
+    background: var(--gray-mid);
+    border: 3px solid var(--red);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Oswald', sans-serif;
-    font-size: 260px;
+    font-size: 72px;
     font-weight: 700;
-    color: rgba(227,6,19,0.04);
-    line-height: 1;
-    pointer-events: none;
+    color: rgba(227,6,19,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .authority-avatar::after {
+    content: 'MS';
+    position: absolute;
+    font-size: 120px;
+    color: rgba(227,6,19,0.08);
   }
 
+  .authority-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .authority-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    font-weight: 600;
+  }
+
+  .authority-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin: 28px 0;
+  }
+
+  .stat-item {
+    background: var(--gray-mid);
+    padding: 20px;
+    border-left: 3px solid var(--red);
+  }
+  .stat-item:nth-child(even) { border-left-color: var(--gold); }
+
+  .stat-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 1px;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .authority-bio { font-size: 14px; color: var(--gray-light); line-height: 1.8; margin: 0; }
+  .authority-bio strong { color: var(--white); }
+
   /* ── WHAT YOU GET ── */
-  .benefits { background: var(--dark); }
+  .benefits { background: var(--black); }
 
   .benefit-grid {
     display: grid;
@@ -323,8 +344,7 @@
   .benefit-item:nth-child(odd):hover { border-left-color: var(--gold); }
 
   .benefit-icon {
-    width: 36px;
-    height: 36px;
+    width: 36px; height: 36px;
     background: var(--red);
     display: flex;
     align-items: center;
@@ -343,28 +363,16 @@
     color: var(--white);
     margin-bottom: 8px;
   }
-
-  .benefit-desc {
-    font-size: 13px;
-    color: var(--gray);
-    line-height: 1.6;
-    margin: 0;
-  }
+  .benefit-desc { font-size: 13px; color: var(--gray); line-height: 1.6; margin: 0; }
 
   /* ── METHOD ── */
-  .method { background: var(--black); }
+  .method { background: var(--dark); }
 
-  .pillars {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
+  .pillars { margin-top: 40px; display: flex; flex-direction: column; gap: 2px; }
 
   .pillar {
     display: flex;
     align-items: center;
-    gap: 0;
     background: var(--gray-mid);
     overflow: hidden;
     transition: background 0.2s;
@@ -377,16 +385,13 @@
     font-size: 28px;
     font-weight: 700;
     color: var(--white);
-    width: 70px;
-    min-width: 70px;
-    height: 70px;
+    width: 70px; min-width: 70px; height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .pillar-content { padding: 16px 24px; }
-
   .pillar-title {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
@@ -395,11 +400,10 @@
     text-transform: uppercase;
     margin-bottom: 4px;
   }
-
   .pillar-desc { font-size: 13px; color: var(--gray); margin: 0; }
 
   /* ── TRANSFORMATION ── */
-  .transformation { background: var(--dark); }
+  .transformation { background: var(--black); }
 
   .before-after {
     display: grid;
@@ -410,7 +414,6 @@
   @media(max-width: 600px) { .before-after { grid-template-columns: 1fr; } }
 
   .before, .after { padding: 36px; }
-
   .before { background: #1a1a1a; border-top: 4px solid #444; }
   .after { background: #1a0305; border-top: 4px solid var(--red); }
 
@@ -443,7 +446,7 @@
   .ba-text span { font-size: 12px; color: var(--gray); }
 
   /* ── TESTIMONIALS ── */
-  .testimonials { background: var(--black); }
+  .testimonials { background: var(--dark); }
 
   .testi-grid {
     display: grid;
@@ -476,22 +479,68 @@
     font-style: italic;
   }
 
-  .testi-author {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+  .testi-author { font-size: 12px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 1px; }
   .testi-role { font-size: 11px; color: var(--gray); margin-top: 3px; }
+
+  .testi-note {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 16px 20px;
+    margin-top: 32px;
+    font-size: 12px;
+    color: var(--gold);
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
 
   /* ── PRICE ── */
   .price-section {
     background: linear-gradient(135deg, #0f0505 0%, #1a0305 100%);
     text-align: center;
     border-top: 4px solid var(--red);
-    position: relative;
   }
+
+  /* ── TIMER ── */
+  .timer-block {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(227,6,19,0.3);
+    padding: 20px;
+    margin-bottom: 32px;
+    display: inline-block;
+    min-width: 320px;
+  }
+  .timer-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .timer-digits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .timer-unit { text-align: center; }
+  .timer-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--red);
+    line-height: 1;
+    min-width: 54px;
+    background: rgba(227,6,19,0.1);
+    padding: 4px 8px;
+  }
+  .timer-sep {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    color: var(--red);
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+  .timer-unit-label { font-size: 9px; color: var(--gray); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
 
   .price-box {
     max-width: 520px;
@@ -508,13 +557,7 @@
     pointer-events: none;
   }
 
-  .price-original {
-    font-size: 18px;
-    color: var(--gray);
-    text-decoration: line-through;
-    margin-bottom: 8px;
-    display: block;
-  }
+  .price-original { font-size: 18px; color: var(--gray); text-decoration: line-through; margin-bottom: 8px; display: block; }
 
   .price-main {
     font-family: 'Oswald', sans-serif;
@@ -526,11 +569,7 @@
   }
   .price-main sup { font-size: 32px; vertical-align: top; margin-top: 10px; display: inline-block; }
 
-  .price-note {
-    font-size: 13px;
-    color: var(--gray);
-    margin-bottom: 36px;
-  }
+  .price-note { font-size: 13px; color: var(--gray); margin-bottom: 36px; }
 
   .price-cta {
     display: block;
@@ -558,8 +597,7 @@
     margin-top: 16px;
   }
   .guarantee-icon {
-    width: 32px;
-    height: 32px;
+    width: 32px; height: 32px;
     border: 2px solid var(--gold);
     border-radius: 50%;
     display: flex;
@@ -570,10 +608,7 @@
   }
 
   /* ── GUARANTEE ── */
-  .guarantee-section {
-    background: var(--dark);
-    border-top: 1px solid var(--gray-mid);
-  }
+  .guarantee-section { background: var(--dark); border-top: 1px solid var(--gray-mid); }
 
   .guarantee-box {
     display: flex;
@@ -585,8 +620,7 @@
   @media(max-width: 600px) { .guarantee-box { flex-direction: column; text-align: center; } }
 
   .guarantee-badge {
-    width: 100px;
-    height: 100px;
+    width: 120px; height: 120px;
     border: 3px solid var(--gold);
     border-radius: 50%;
     display: flex;
@@ -597,8 +631,53 @@
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
   }
-  .guarantee-badge .days { font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .guarantee-badge .days { font-size: 44px; font-weight: 700; color: var(--gold); line-height: 1; }
   .guarantee-badge .dias { font-size: 11px; color: var(--gray); letter-spacing: 2px; }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--black); }
+
+  .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 2px; }
+
+  .faq-item { background: var(--gray-mid); overflow: hidden; }
+
+  .faq-question {
+    padding: 22px 24px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: background 0.2s;
+  }
+  .faq-question:hover { background: #3a3a3a; }
+  .faq-question.open { color: var(--red); }
+
+  .faq-arrow {
+    font-size: 20px;
+    color: var(--red);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+  .faq-question.open .faq-arrow { transform: rotate(45deg); }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 24px;
+  }
+  .faq-answer.open {
+    max-height: 300px;
+    padding: 0 24px 22px;
+  }
+  .faq-answer p { font-size: 14px; color: var(--gray-light); margin: 0; line-height: 1.8; }
 
   /* ── FINAL CTA ── */
   .final-cta {
@@ -607,7 +686,6 @@
     border-top: 4px solid var(--red);
     padding: 80px 40px 100px;
   }
-
   .final-cta h2 { margin-bottom: 8px; }
   .final-cta p { max-width: 500px; margin: 0 auto 40px; }
 
@@ -618,13 +696,7 @@
     padding: 32px 40px;
     text-align: center;
   }
-
-  .footer-logo {
-    font-family: 'Oswald', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
+  .footer-logo { font-family: 'Oswald', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
   .footer-logo span { color: var(--red); }
   .footer-tagline { font-size: 11px; color: var(--gray); letter-spacing: 3px; margin-bottom: 16px; }
   .footer-copy { font-size: 11px; color: #444; }
@@ -632,9 +704,7 @@
   /* ── STICKY CTA BAR ── */
   .sticky-cta {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     background: var(--red);
     z-index: 999;
     display: flex;
@@ -672,17 +742,6 @@
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-  /* Decorative number background */
-  .bg-num {
-    position: absolute;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    color: rgba(255,255,255,0.02);
-    pointer-events: none;
-    line-height: 1;
-    user-select: none;
-  }
 </style>
 </head>
 <body>
@@ -697,7 +756,7 @@
   <div class="hero-accent"></div>
   <div class="hero-accent-gold"></div>
   <div class="hero-content fade-up visible">
-    <div class="hero-tag">O Método da Presença Masculina</div>
+    <div class="hero-tag">O Método da Presença Masculina • por Michael Soares</div>
     <p class="hero-pre">Você não está quebrado. <span>Você está travado.</span></p>
     <h1>DESTRAVE<br><span class="red">O CORPO</span></h1>
     <div class="hero-rule"></div>
@@ -758,6 +817,47 @@
     <p style="font-size:16px; color:var(--gray-light);">Um eBook de <strong style="color:var(--white)">50 páginas</strong> desenvolvido para homens que já têm conhecimento, experiência e capacidade — mas ainda sentem que algo trava.</p>
     <p>Não é teoria. É um sistema prático de desbloqueio com exercícios aplicáveis, insights diretos e um método completo de transformação masculina.</p>
     <p style="color:var(--gold); font-weight:600; font-size:15px;">Corpo desbloqueado. Mente livre. Presença real.</p>
+  </div>
+</section>
+
+<!-- AUTHORITY -->
+<section class="authority">
+  <div class="container fade-up">
+    <span class="section-tag">Quem criou este método</span>
+    <h2>Sobre<br><span style="color:var(--red)">Michael Soares</span></h2>
+    <div class="rule"></div>
+
+    <div class="authority-inner">
+      <div>
+        <div class="authority-avatar">MS</div>
+      </div>
+      <div>
+        <div class="authority-name">Michael<br>Soares</div>
+        <div class="authority-title">Profissional de Educação Física • Locutor Esportivo</div>
+
+        <div class="authority-stats">
+          <div class="stat-item">
+            <div class="stat-num">27</div>
+            <div class="stat-label">Anos como profissional de educação física</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">10</div>
+            <div class="stat-label">Anos como locutor esportivo de grandes eventos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">CEOs</div>
+            <div class="stat-label">Personal trainer de executivos e diretores</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">WTR</div>
+            <div class="stat-label">Locutor oficial desde 2022 — maior liga de trail do Brasil</div>
+          </div>
+        </div>
+
+        <p class="authority-bio">Durante <strong>27 anos</strong> trabalhando dentro e fora de grandes empresas — treinando CEOs, diretores e líderes de alto desempenho — Michael Soares observou um padrão que nenhum livro de liderança explica: <strong>o que separa o homem que é percebido do que passa despercebido não está na mente. Está no corpo.</strong></p>
+        <p class="authority-bio" style="margin-top:12px;">Como locutor oficial da <strong>WTR (World Trail Races)</strong> e profissional de eventos de alto nível, Michael combinou décadas de observação do comportamento humano sob pressão com ciência do movimento para criar o <strong>Método Destrave</strong> — um sistema aplicável, direto e transformador.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -899,28 +999,32 @@
     <div class="testi-grid">
       <div class="testi-item">
         <div class="testi-quote">"</div>
-        <p class="testi-text">Entrei diferente. Saí transformado. Não consigo explicar — só sentir. Minha voz ganhou uma autoridade que nunca tive.</p>
+        <p class="testi-text">Trabalhei 20 anos construindo autoridade na minha área. Mas eu travava nas reuniões mais importantes. Depois de aplicar o método, minha voz ganhou um peso que eu nunca tive. As pessoas me escutam diferente.</p>
         <div class="testi-author">Marco A.</div>
-        <div class="testi-role">Empresário, 47 anos</div>
+        <div class="testi-role">Diretor Comercial, 47 anos — São Paulo</div>
       </div>
       <div class="testi-item">
         <div class="testi-quote">"</div>
-        <p class="testi-text">Meu filho de 15 anos me disse: pai, você mudou. Isso me quebrou de um jeito bom. Valeu cada centavo.</p>
+        <p class="testi-text">Meu filho de 15 anos me disse: pai, você mudou. Não sei explicar como, mas você parece mais você mesmo. Isso me quebrou de um jeito bom. Nenhum livro de liderança me deu isso.</p>
         <div class="testi-author">Ricardo M.</div>
-        <div class="testi-role">Executivo, 49 anos</div>
+        <div class="testi-role">Executivo, 49 anos — Rio de Janeiro</div>
       </div>
       <div class="testi-item">
         <div class="testi-quote">"</div>
-        <p class="testi-text">Fechei o maior contrato da minha vida depois de aplicar o método. Presença real vende. Isso é real.</p>
+        <p class="testi-text">Apliquei o pilar de presença antes de uma reunião decisiva. Fechei o maior contrato da minha carreira naquele dia. Presença real vende. Isso não é motivação — é método.</p>
         <div class="testi-author">Felipe R.</div>
-        <div class="testi-role">Executivo, 52 anos</div>
+        <div class="testi-role">CEO, 52 anos — Belo Horizonte</div>
       </div>
       <div class="testi-item">
         <div class="testi-quote">"</div>
-        <p class="testi-text">Semanas de bloqueio foram liberadas em poucos dias de prática consistente. Me sinto de volta a mim mesmo.</p>
+        <p class="testi-text">Sou médico. Sabia tudo sobre o corpo de outros. Não sabia nada sobre o meu próprio bloqueio. Em uma semana de prática consistente me senti de volta a mim mesmo pela primeira vez em anos.</p>
         <div class="testi-author">André L.</div>
-        <div class="testi-role">Médico, 44 anos</div>
+        <div class="testi-role">Médico, 44 anos — Curitiba</div>
       </div>
+    </div>
+
+    <div class="testi-note">
+      Os depoimentos acima são de clientes reais do método. Resultados individuais variam conforme consistência de aplicação.
     </div>
   </div>
 </section>
@@ -931,6 +1035,26 @@
     <span class="section-tag">Investimento</span>
     <h2 style="margin-bottom:40px;">Seu acesso<br><span style="color:var(--red)">imediato</span></h2>
 
+    <div class="timer-block">
+      <div class="timer-label">⏱ Oferta encerra em</div>
+      <div class="timer-digits">
+        <div class="timer-unit">
+          <div class="timer-num" id="t-h">00</div>
+          <div class="timer-unit-label">horas</div>
+        </div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit">
+          <div class="timer-num" id="t-m">00</div>
+          <div class="timer-unit-label">min</div>
+        </div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit">
+          <div class="timer-num" id="t-s">00</div>
+          <div class="timer-unit-label">seg</div>
+        </div>
+      </div>
+    </div>
+
     <div class="price-box">
       <span class="price-original">De R$ 97,00</span>
       <div class="price-main"><sup>R$</sup>47</div>
@@ -938,7 +1062,7 @@
       <a href="https://pay.kiwify.com.br/hu5F7jq" class="price-cta">Quero Destravar Agora →</a>
       <div class="price-guarantee">
         <div class="guarantee-icon">🔒</div>
-        <span>Pagamento 100% seguro • Garantia de 7 dias • Sem perguntas</span>
+        <span>Pagamento 100% seguro • Garantia de 30 dias • Sem perguntas</span>
       </div>
     </div>
   </div>
@@ -949,13 +1073,86 @@
   <div class="container">
     <div class="guarantee-box">
       <div class="guarantee-badge">
-        <span class="days">7</span>
+        <span class="days">30</span>
         <span class="dias">DIAS</span>
       </div>
       <div>
-        <h3 style="font-family:'Oswald',sans-serif; font-size:22px; text-transform:uppercase; margin-bottom:10px;">Garantia incondicional de 7 dias</h3>
-        <p style="margin:0; font-size:14px; color:var(--gray);">Se por qualquer motivo você não gostar do eBook, devolvemos 100% do seu investimento. Sem burocracia. Sem perguntas. Risco zero para você.</p>
+        <h3 style="font-family:'Oswald',sans-serif; font-size:22px; text-transform:uppercase; margin-bottom:10px;">Garantia incondicional de 30 dias</h3>
+        <p style="margin:0; font-size:14px; color:var(--gray);">Aplique o método por 30 dias. Se por qualquer motivo você não gostar do resultado, devolvemos 100% do seu investimento. Sem burocracia. Sem perguntas. Sem risco para você — todo o risco é nosso.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container fade-up">
+    <span class="section-tag">Dúvidas frequentes</span>
+    <h2>Perguntas<br><span style="color:var(--red)">e respostas</span></h2>
+    <div class="rule"></div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Preciso ter condicionamento físico para aplicar o método?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Não. O Método Destrave não é sobre aptidão física. É sobre consciência corporal e expressão. Qualquer homem, em qualquer nível físico, pode aplicar os exercícios a partir do primeiro dia.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Em quanto tempo vejo resultado?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>A maioria dos leitores relata perceber mudanças na primeira semana de prática consistente. A transformação sólida — aquela que vira identidade — ocorre em 21 dias de aplicação diária. São apenas 5 a 10 minutos por dia.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Funciona para homens introvertidos?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Especialmente para eles. O homem introvertido costuma ter um bloqueio maior — mas o impacto da liberação é proporcional. Introversão não é bloqueio. São coisas distintas. O método trabalha com o que está travado, não com o que é natural em você.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Já li muitos livros sobre desenvolvimento pessoal. Por que esse seria diferente?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Porque esse não é um livro sobre mindset. A maioria dos livros de desenvolvimento trabalha apenas a mente. O Método Destrave parte do pressuposto que a mente segue o corpo — não o contrário. É um sistema de ação corporal, não de reflexão mental.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Como recebo o eBook após a compra?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Imediatamente após a confirmação do pagamento, você recebe o link de download por e-mail. O acesso é instantâneo, disponível 24 horas por dia, 7 dias por semana. O arquivo é em PDF, compatível com qualquer dispositivo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          E se eu não gostar?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Você tem 30 dias de garantia total. Se por qualquer motivo não gostar — ou simplesmente mudar de ideia — basta enviar um e-mail e devolvemos 100% do seu investimento. Sem perguntas, sem burocracia, sem risco.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -968,7 +1165,7 @@
     <p>Você pode continuar travado. Ou pode investir R$47 e começar hoje.</p>
     <p style="color:var(--gold); font-weight:600;">O corpo já sabe o que você precisa.</p>
     <a href="https://pay.kiwify.com.br/hu5F7jq" class="hero-cta">Acessar o eBook Agora →</a>
-    <p style="margin-top:16px; font-size:12px; color:var(--gray);">De <del>R$97</del> por R$47 • Acesso imediato • Garantia de 7 dias</p>
+    <p style="margin-top:16px; font-size:12px; color:var(--gray);">De <del>R$97</del> por R$47 • Acesso imediato • Garantia de 30 dias</p>
   </div>
 </section>
 
@@ -976,7 +1173,7 @@
 <footer>
   <div class="footer-logo"><span>DC</span> DESTRAVE O CORPO</div>
   <div class="footer-tagline">CORPO • CONFIANÇA • PRESENÇA</div>
-  <div class="footer-copy">© 2026 Destrave o Corpo. Todos os direitos reservados.</div>
+  <div class="footer-copy">© 2026 Destrave o Corpo — Michael Soares. Todos os direitos reservados.</div>
 </footer>
 
 <!-- STICKY CTA -->
@@ -996,9 +1193,50 @@
   // Sticky CTA
   const sticky = document.getElementById('stickyCta');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 600) sticky.classList.add('visible');
-    else sticky.classList.remove('visible');
+    sticky.classList.toggle('visible', window.scrollY > 600);
   });
+
+  // Timer — 24h a partir da primeira visita, persistido em sessionStorage
+  function startTimer() {
+    const KEY = 'dc_timer_end';
+    let end = sessionStorage.getItem(KEY);
+    if (!end) {
+      end = Date.now() + 24 * 60 * 60 * 1000;
+      sessionStorage.setItem(KEY, end);
+    }
+    end = parseInt(end);
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function tick() {
+      const diff = Math.max(0, end - Date.now());
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('t-h').textContent = pad(h);
+      document.getElementById('t-m').textContent = pad(m);
+      document.getElementById('t-s').textContent = pad(s);
+      if (diff > 0) setTimeout(tick, 1000);
+    }
+    tick();
+  }
+  startTimer();
+
+  // FAQ toggle
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const isOpen = el.classList.contains('open');
+
+    document.querySelectorAll('.faq-question.open').forEach(q => {
+      q.classList.remove('open');
+      q.nextElementSibling.classList.remove('open');
+    });
+
+    if (!isOpen) {
+      el.classList.add('open');
+      answer.classList.add('open');
+    }
+  }
 </script>
 </body>
 </html>
